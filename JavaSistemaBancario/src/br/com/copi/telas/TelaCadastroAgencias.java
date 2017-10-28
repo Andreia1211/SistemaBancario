@@ -122,7 +122,7 @@ public class TelaCadastroAgencias extends javax.swing.JFrame {
         else if(nome.isEmpty()){
             JOptionPane.showMessageDialog(this, "Informe o nome da Agência. ");
         }
-        else {
+        else { 
        
             boolean adicionado = Principal.adicionarAgencia(numero, nome);
         
