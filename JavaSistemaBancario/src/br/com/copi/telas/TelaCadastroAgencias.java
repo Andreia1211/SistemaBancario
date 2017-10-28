@@ -99,7 +99,7 @@ public class TelaCadastroAgencias extends javax.swing.JFrame {
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 130, 10));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 130, 20));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/copi/imagens/background.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/copi/imagens/backgound.png"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 350, 210));
 
         pack();
@@ -108,6 +108,7 @@ public class TelaCadastroAgencias extends javax.swing.JFrame {
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         // TODO add your handling code here:
+        this.instanciaTelaPrincipal.setEnabled(true);
         this.instanciaTelaPrincipal.toFront();
     }//GEN-LAST:event_formWindowClosed
 
@@ -127,6 +128,8 @@ public class TelaCadastroAgencias extends javax.swing.JFrame {
         
             if (adicionado){
             JOptionPane.showMessageDialog(this, "Agência foi adicionada com sucesso");
+            
+            this.dispose();
             }
             else{
             JOptionPane.showMessageDialog(this, "Agência não foi adicionada. Tente novamente! ");

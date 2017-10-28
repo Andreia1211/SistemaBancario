@@ -105,21 +105,16 @@ public class TelaLogin extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
         String usuario = txtUsuario.getText();
-        String senha = pfSenha.getPassword().toString();
-        
-        System.out.println(usuario.isEmpty());
-        System.out.println(senha);
-        
-        
-        if(!usuario.isEmpty() && !senha.isEmpty()){
-        //Tela Principal
-        new TelaPrincipal(usuario).setVisible(true);
-        
-        this.dispose();
-        
-        }
-        else{
-        System.out.println("Insira um usuário e uma senha.");
+        String senha = new String(pfSenha.getPassword());
+
+        if (!usuario.isEmpty() && !senha.isEmpty()) {
+            //Tela Principal
+            new TelaPrincipal(usuario).setVisible(true);
+
+            this.dispose();
+
+        } else {
+            System.out.println("Insira um usuário e uma senha.");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
 

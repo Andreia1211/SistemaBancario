@@ -42,6 +42,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mArquivo = new javax.swing.JMenu();
         mAgencia = new javax.swing.JMenu();
         miCadastrar = new javax.swing.JMenuItem();
+        miListar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Principal");
@@ -53,7 +54,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         lbUsuario.setText("Olá {SAMUEL}");
         getContentPane().add(lbUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/copi/imagens/background.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/copi/imagens/backgound.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 400, 260));
 
         mArquivo.setText("Arquivo");
@@ -69,6 +70,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         mAgencia.add(miCadastrar);
 
+        miListar.setText("Listar");
+        miListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miListarActionPerformed(evt);
+            }
+        });
+        mAgencia.add(miListar);
+
         jMenuBar1.add(mAgencia);
 
         setJMenuBar(jMenuBar1);
@@ -83,6 +92,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
         this.setEnabled(false);
     }//GEN-LAST:event_miCadastrarActionPerformed
+
+    private void miListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miListarActionPerformed
+        // TODO add your handling code here:
+         new TelaListarAgencia(this).setVisible(true);
+        
+        this.setEnabled(false);
+    }//GEN-LAST:event_miListarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,5 +142,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mAgencia;
     private javax.swing.JMenu mArquivo;
     private javax.swing.JMenuItem miCadastrar;
+    private javax.swing.JMenuItem miListar;
     // End of variables declaration//GEN-END:variables
 }
